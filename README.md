@@ -1,58 +1,31 @@
 # ML Practical
 
-This repository contains a collection of Jupyter notebooks (`.ipynb`) and datasets used for machine learning practicals. The notebooks cover the main stages of a machine learning workflow, from data loading and preprocessing to model training, evaluation, and visualization.
+A collection of Jupyter notebooks and datasets for hands-on machine-learning practice with Python. The work ranges from exploratory data analysis and preprocessing through feature encoding and introductory neural-network concepts.
 
-## Project Overview
+## Notebooks
 
-The project is designed to help learn and practice core machine learning concepts using Python and popular libraries such as NumPy, Pandas, Matplotlib, Seaborn, and Scikit-learn.
+| Notebook | Focus |
+| --- | --- |
+| `1.ipynb` | Bivariate analysis and visualisation with scatter, bar, and box plots. |
+| `2.ipynb` | Data-cleaning workflow. |
+| `3.ipynb` | Ordinal and one-hot encoding for categorical features. |
+| `4.ipynb` | Machine-learning practical exercises. |
+| `5.ipynb` | Machine-learning practical exercises. |
+| `6.ipynb` | Perceptron trick and the perceptron loss function on synthetic classification data. |
+| `minor_project.ipynb` | Spam detection using TF-IDF features, Multinomial Naive Bayes, and Logistic Regression. |
 
-## Current Notebook Collection
+## Minor project: spam detection
 
-The folder currently includes the following notebooks:
+`minor_project.ipynb` builds a binary email classifier from `enron_spam_data.csv`:
 
-- `1.ipynb`
-- `2.ipynb`
-- `3.ipynb`
-- `4.ipynb`
-- `5.ipynb`
-- `6.ipynb`
-- `garbage-classification.ipynb`
+- Combines email subject and message text, removes duplicates, and drops the date column.
+- Splits the data into training and test sets (70/30).
+- Converts text to TF-IDF features with English stop-word removal and 1–2 word n-grams.
+- Trains and evaluates Multinomial Naive Bayes and Logistic Regression using classification reports and ROC-AUC.
 
-## Topics Covered in the Notebook Files
+## Datasets
 
-The notebooks in this project include practical exercises on the following topics:
-
-- Data loading and exploration
-- Data preprocessing and cleaning
-- Handling missing values
-- Feature scaling and normalization
-- Exploratory Data Analysis (EDA)
-- Data visualization
-- Simple Linear Regression
-- Multiple Linear Regression
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Decision Trees
-- Random Forest
-- Support Vector Machines (SVM)
-- Naive Bayes
-- K-Means Clustering
-- Hierarchical Clustering
-- Principal Component Analysis (PCA)
-- Model evaluation using:
-  - Train-test split
-  - Cross-validation
-  - Confusion matrix
-  - Accuracy
-  - Precision
-  - Recall
-  - F1-score
-  - ROC-AUC
-
-## Datasets Included
-
-The project includes the following datasets for classification and regression tasks:
-
+- `enron_spam_data.csv` — email subject/message data labelled spam or ham.
 - `nursery.csv`
 - `Social_Network_Ads.csv`
 - `StudentPerformanceFactors.csv`
@@ -60,27 +33,21 @@ The project includes the following datasets for classification and regression ta
 - `tested.csv`
 - `used_car_price_prediction.csv`
 
-## Tools and Libraries Used
+## Requirements
 
-- Python
-- Jupyter Notebook
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
+- Python 3
+- Jupyter Notebook or VS Code with the Jupyter extension
+- NumPy, Pandas, Matplotlib, Seaborn, and scikit-learn
 
-## How to Use
+Install the Python libraries if needed:
 
-1. Open the `.ipynb` files in Jupyter Notebook or VS Code.
-2. Run the cells in order to reproduce the experiments.
-3. Use the provided datasets for training and evaluation.
-
-## Recent Update
-
-This repository now includes `6.ipynb` and `garbage-classification.ipynb`, in addition to the existing ML practical notebooks and datasets.
-
-## Summary
-
-This project provides hands-on practice in important machine learning concepts, covering supervised and unsupervised learning, data preprocessing, visualization, and model evaluation.
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn jupyter
 ```
+
+## Running the notebooks
+
+1. Clone or download this repository.
+2. Open the folder in Jupyter Notebook or VS Code.
+3. Start with the notebook of interest and run its cells in order.
+4. Keep each CSV dataset in the repository root so the notebook file paths resolve correctly.
